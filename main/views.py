@@ -8,12 +8,12 @@ def board(request):
     if request.method == 'POST':
         title = request.POST['title']
         content = request.POST['content']
-        writer = request.POST['writer']
+        user = request.user
 
         board = Board(
             title=title,
             content=content,
-            writer=writer,
+            user=user,
         )
         board.save()
         return redirect('board')
@@ -32,7 +32,7 @@ def boardEdit(request, pk):
     if request.method == "POST":
         board.title = request.POST['title']
         board.content = request.POST['content']
-        board.writer = request.POST['writer']
+        board.user = request.user
 
         board.save()
         return redirect('board')
@@ -55,3 +55,6 @@ def post(request):
     else:
         post = Post.objects.get(id=1)
         return render(request, 'post_list.html', {'post':post})
+
+def home(request):
+    return render(request, 'home.html')        
