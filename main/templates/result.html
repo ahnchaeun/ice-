@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+{% for movie in movie %}
+<h4>제목: {{movie.movie_Title}}</h4>
+<h4>개봉년도: {{movie.movie_Year}}</h4>
+
+{% empty %}
+    검색결과가 없습니다.
+{% endfor %}
+{% endblock %}

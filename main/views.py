@@ -57,4 +57,9 @@ def post(request):
         return render(request, 'post_list.html', {'post':post})
 
 def home(request):
-    return render(request, 'home.html')        
+    return render(request, 'home.html')   
+
+def search(request):
+    movie_list = movie.objects.order_by()
+    context = {'movie_list':movie_list}
+    return render(request,'search.html',context)        
