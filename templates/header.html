@@ -3,16 +3,17 @@
         {% if user.is_authenticated %}
             <div class="logout_div">
                 <ul class="underline-hover">
-                    <li style="float:right;" class="logout_text"><a href="{% url 'home' %}"><span>홈</span></a></li>
-                    <li style="float:rigth;" class="logout_text"><a href="{% url 'board' %}"><span>게시판</span></a></li>
-                    <li style="float:right;" class="logout_text"><a href="{% url 'logout' %}"><span>로그아웃</span></a></li>
+                    <li style="float:right;" class="logout_text"><a href="{% url 'home' %}"><span>HOME</span></a></li>
+                    <li style="float:right;" class="logout_text"><a href="{% url 'board' %}"><span>COMMUNITY</span></a></li>
+                    <li style="float:right;" class="logout_text"><a href="{% url 'logout' %}"><span>LOGOUT</span></a></li>
+                    <li style="float:right;" class="logout_text"><a href="{% url 'search' %}"><span>SELECT</span></a></li>
                 </ul>
             </div>
         {% else %}
             <div class="login_div">
                 <ul class="underline-hover">
-                    <li class="login_text"><a href="{% url 'login' %}"><span>로그인</span></a></li>
-                    <li class="login_text"><a href="{% url 'signup' %}"><span>회원가입</span></a></li>
+                    <li class="login_text"><a href="{% url 'login' %}"><span>LOGIN</span></a></li>
+                    <li class="login_text"><a href="{% url 'signup' %}"><span>SIGN UP</span></a></li>
                 </ul>
             </div>
         {% endif %}

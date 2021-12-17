@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+{%if movie_2005 %} <!--movie_list가 있다면-->
+    <ul>
+        {%for movie in movie_2005%}<!--리스트 반복하여 순차적으로 하나씩 movie에 대입-->
+            <li>{{movie.movie_Title}}, {{movie.movie_Year}}</li>
+        {%endfor%}
+        {%for movie in movie_2006%}
+            <li>{{movie.movie_Title}}, {{movie.movie_Year}}</li>
+        {%endfor%}
+        {%for movie in movie_2007%}
+            <li>{{movie.movie_Title}}, {{movie.movie_Year}}</li>
+        {%endfor%}
+        {%for movie in movie_2008%}
+            <li>{{movie.movie_Title}}, {{movie.movie_Year}}</li>
+        {%endfor%}
+        {%for movie in movie_2009%}
+            <li>{{movie.movie_Title}}, {{movie.movie_Year}}</li>
+        {%endfor%}
+        {%for movie in movie_2010%}
+            <li>{{movie.movie_Title}}, {{movie.movie_Year}}</li>
+        {%endfor%}
+            
+    </ul>
+{%endif%}    
+{% endblock %}  
