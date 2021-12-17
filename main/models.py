@@ -16,8 +16,9 @@ class movie(models.Model):
     movie_Title = models.CharField(max_length=50)
     movie_Year = models.CharField(max_length=20)
 
-#class genre(models.Model):
- #   movie_genre    
+class genre(models.Model):
+    genre_title = models.CharField(max_length=50)
+    genre_name = models.CharField(max_length=20)  
 
 
 

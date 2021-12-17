@@ -133,6 +133,11 @@ def yearup10(request):
       }
     return render(request, 'up10.html',context)
 
+def genresf(request):
+    genre_sf = genre.objects.filter(genre_name='SF')
+    context = {'genre_sf':genre_sf}
+    return render(request, 'sf.html',context)
+
    
 
     

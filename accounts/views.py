@@ -40,6 +40,3 @@ def logout(request):
 #home
 def home(request):
     return render(request, 'home.html')                        
-
-
-
