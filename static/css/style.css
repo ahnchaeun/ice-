@@ -23,33 +23,7 @@
 }
 /* 헤더 부분 설정 */
 
-.searchbar{
-    width: 300px;
-    height: 40px;
-    background: rgba(0,0,0,0.5);
-    border-radius: 5px;
-    margin-top: 24px;
-}
-/* 검색창 */
 
-.searchbar > form > input{
-    border: none;
-    width: 240px;
-    height: 40px;
-    background:rgba(0,0,0,0);
-    color:white;
-    padding-left: 10px;
-
-}
-/* 검색창 설정 */
-
-.searchbar > form > span{
-    width: 50px;
-    color: white;
-    font-weight: bold;
-    cursor:pointer;
-}
-/* 검색창 글씨 */
 
 .navigation{
     display: flex;
