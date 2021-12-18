@@ -138,6 +138,83 @@ def genresf(request):
     context = {'genre_sf':genre_sf}
     return render(request, 'sf.html',context)
 
+def genrehorror(request):
+    genre_horror = genre.objects.filter(genre_name='공포')
+    context = {'genre_horror':genre_horror}
+    return render(request, 'horror.html',context)
+
+def genredrama(request):
+    genre_drama = genre.objects.filter(genre_name='드라마')
+    context = {'genre_drama':genre_drama}
+    return render(request, 'drama.html',context)
+
+def genreromance(request):
+    genre_romance = genre.objects.filter(genre_name='로맨스')
+    context = {'genre_romance':genre_romance}
+    return render(request, 'romance.html',context)
+
+def genremelo(request):
+    genre_melo = genre.objects.filter(genre_name='멜로')
+    context = {'genre_melo':genre_melo}
+    return render(request, 'melo.html',context)
+
+def genremystery(request):
+    genre_mystery = genre.objects.filter(genre_name='미스터리')
+    context = {'genre_mystery':genre_mystery}
+    return render(request, 'mystery.html',context)
+
+def genrecriminal(request):
+    genre_criminal = genre.objects.filter(genre_name='범죄')
+    context = {'genre_criminal':genre_criminal}
+    return render(request, 'criminal.html',context)
+
+def genrethriller(request):
+    genre_thriller = genre.objects.filter(genre_name='스릴러')
+    context = {'genre_thriller':genre_thriller}
+    return render(request, 'thriller.html',context)
+
+def genreani(request):
+    genre_ani = genre.objects.filter(genre_name='애니메이션')
+    context = {'genre_ani':genre_ani}
+    return render(request, 'ani.html',context)
+
+def genreaction(request):
+    genre_action = genre.objects.filter(genre_name='액션')
+    context = {'genre_action':genre_action}
+    return render(request, 'action.html',context)
+
+def genrecomedy(request):
+    genre_comedy = genre.objects.filter(genre_name='코미디')
+    context = {'genre_comedy':genre_comedy}
+    return render(request, 'comedy.html',context)
+
+def genrefantasy(request):
+    genre_fantasy = genre.objects.filter(genre_name='판타지')
+    context = {'genre_fantasy':genre_fantasy}
+    return render(request, 'fantasy.html',context)
+
+def gradeall(request):
+    grade_all = grade.objects.filter(grade_age='전체관람가')
+    context = {'grade_all':grade_all}
+    return render(request, 'all.html',context)
+
+def grade12(request):
+    grade_12 = grade.objects.filter(grade_age='12세 관람가')
+    context = {'grade_12':grade_12}
+    return render(request, '12.html',context)    
+
+def grade15(request):
+    grade_15 = grade.objects.filter(grade_age='15세 관람가')
+    context = {'grade_15':grade_15}
+    return render(request, '15.html',context)    
+
+def gradeadult(request):
+    grade_adult = grade.objects.filter(grade_age='청소년 관람불가')
+    context = {'grade_adult':grade_adult}
+    return render(request, 'adult.html',context)    
+
+
+
    
 
     

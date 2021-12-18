@@ -1,5 +1,451 @@
-{% extends 'base.html' %}
-{% load bootstrap4 %}
-{% block content %}
-<h2>영화포스터들어가야함 그리고</h2>
-{% endblock %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+    <meta charset="UTF-8">
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" >
+        <!-- 폰트설정 -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <!-- css와 연동시켜주기 -->
+        <style>
+            #wrap{
+                width:1400px;
+                margin: 100px auto;
+                overflow: hidden;
+                position: absolute;
+                padding-top: 200px;
+            }
+            /* wrap 위치와 너비 등 조정 */
+            
+            article{
+                float: left;
+                margin-left: 160px;
+                margin-bottom: 100px;
+            }
+            /*img 정렬 방향과 간격 등 조정*/
+
+            img {
+        width: 290px;
+        height: 390px;
+      }
+      /* 이미지 크기 */
+
+      .a img {
+        transition: all 0.2s linear;
+      }
+      /* 이미지 모션 */
+
+      .a:hover img {
+        transform: scale(1.2);
+      }
+      /* 이미지 확대 설정 */
+      
+        </style>
+    </head>
+
+    <body>
+        <div class = "TVIN">
+            <div class="main_background">
+                <div class="header">
+                    <div class="searchbar">
+                        <form>
+                            <input type = "search" placeholder="Search">
+                            <span>Search</span>
+                            <!-- 검색창 -->
+                        </form>
+                    </div>
+                    <ul class ="navigation">
+                        <li><a href="{% url 'login' %}">LOGIN</a></li>
+                        <li><a href="{% url 'board' %}">COMMUNITY</a></li>
+                        <li><a href="{% url 'search' %}">SELECT</a></li>
+                        <!-- 각각 글씨를 눌렀을 때 이동할 html지정 -->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="wrap">
+            <!-- wrap으로 이름 부여 -->
+            
+            <span class="a">
+              <article><a href="{% static '상세정보/7번방의선물.html' %}">
+                <img src="{% static 'img/7번방의선물.jpg' %}"/></a></article></span>
+            <span class="a">
+                <article><a href="{% static '상세정보/기생충.html' %}">
+                  <img src="{% static 'img/기생충.jpg' %}"/></a></article></span>
+                  <span class="a">    
+                  <article><a href="{% static '상세정보/극한직업.html' %}">
+                    <img src="{% static 'img/극한직업.jpg' %}"/></a></article></span>
+                  <span class="a">
+                  <article><a href="{% static '상세정보/귀멸의칼날.html' %}">
+                    <img src="{% static 'img/귀멸의칼날.jpg' %}"/></a></article></span>
+                  <span class="a">
+                  <article><a href="{% static '상세정보/베테랑.html' %}">
+                    <img src="{% static 'img/베테랑.jpg' %}"/></a></article></span>
+                  <span class="a"> 
+                  <article><a href="{% static '상세정보/부산행.html' %}">
+                    <img src="{% static 'img/부산행.jpg' %}"/></a></article></span>
+                  <span class="a">
+                  <article><a href="{% static '상세정보/분노의질주.html' %}">
+                    <img src="{% static 'img/분노의질주.jpg' %}"/></a></article></span>
+                  <span class="a">
+                  <article><a href="{% static '상세정보/신과함께.html' %}">
+                    <img src="{% static 'img/신과함께.jpg' %}"/></a></article></span>
+                  <span class="a">
+                  <article><a href="{% static '상세정보/검사외전.html' %}">
+                    <img src="{% static 'img/검사외전.jpg' %}"/></a></article></span>
+                  <span class="a">
+                  <article><a href="{% static '상세정보/1987.html' %}">
+                    <img src="{% static 'img/1987.jpg' %}"/></a></article></span>
+                  <span class="a">
+                  <article><a href="{% static '상세정보/가구야공주이야기.html' %}">
+                    <img src="{% static 'img/가구야공주이야기.jpg' %}"/></a></article></span>
+                  <span class="a">
+                  <article><a href="{% static '상세정보/가디언즈오브갤럭시.html' %}">
+                    <img src="{% static 'img/가디언즈오브갤럭시.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/가문의영광.html' %}">
+                    <img src="{% static 'img/가문의영광.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/각설탕.html' %}">
+                    <img src="{% static 'img/각설탕.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/건축학개론.html' %}">
+                    <img src="{% static 'img/건축학개론.jpg' %}"/></a></article></span>
+                   <span class="a">
+                  <article><a href="{% static '상세정보/걸캅스.html' %}">
+                    <img src="{% static 'img/걸캅스.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/겨울왕국.html' %}">
+                    <img src="{% static 'img/겨울왕국.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/고양이의보은.html' %}">
+                    <img src="{% static 'img/고양이의보은.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/곡성.html' %}">
+                    <img src="{% static 'img/곡성.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/곤지암.html' %}">
+                    <img src="{% static 'img/곤지암.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/괴물.html' %}">
+                    <img src="{% static 'img/괴물.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/국가대표.html' %}">
+                    <img src="{% static 'img/국가대표.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/군도.html' %}">
+                    <img src="{% static 'img/군도.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/그시절우리가좋아했던소녀.html' %}">
+                    <img src="{% static 'img/그시절우리가좋아했던소녀.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/기생충.html' %}">
+                    <img src="{% static 'img/기생충.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/나쁜녀석들.html' %}">
+                    <img src="{% static 'img/나쁜녀석들.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/나의소녀시대.html' %}">
+                    <img src="{% static 'img/나의소녀시대.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/날씨의아이.html' %}">
+                    <img src="{% static 'img/날씨의아이.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/너의이름은.html' %}">
+                    <img src="{% static 'img/너의이름은.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/너의췌장을먹고싶어.html' %}">
+                    <img src="{% static 'img/너의췌장을먹고싶어.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/노트북.html' %}">
+                    <img src="{% static 'img/노트북.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/다크나이트.html' %}">
+                    <img src="{% static 'img/다크나이트.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/닥터스트레인지.html' %}">
+                    <img src="{% static 'img/닥터스트레인지.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/덩케르크.html' %}">
+                    <img src="{% static 'img/덩케르크.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/도굴.html' %}">
+                    <img src="{% static 'img/도굴.jpg' %}"/></a></article></span>
+                 <span class="a">
+                  <article><a href="{% static '상세정보/도둑들.html' %}">
+                    <img src="{% static 'img/도둑들.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/도라에몽.html' %}">
+                    <img src="{% static 'img/도라에몽.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/디워.html' %}">
+                    <img src="{% static 'img/디워.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/러브로지.html' %}">
+                    <img src="{% static 'img/러브로지.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/럭키.html' %}">
+                    <img src="{% static 'img/럭키.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/로건.html' %}">
+                    <img src="{% static 'img/로건.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/링.html' %}">
+                    <img src="{% static 'img/링.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/마녀배달부키키.html' %}">
+                    <img src="{% static 'img/마더.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/마루밑아리에티.html' %}">
+                    <img src="{% static 'img/마루밑아리에티.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/마이너리티리포트.html' %}">
+                    <img src="{% static 'img/마이너리티리포트.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/매트릭스.html' %}">
+                    <img src="{% static 'img/매트릭스.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/메이즈러너.html' %}">
+                    <img src="{% static 'img/메이즈러너.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/무서운이야기.html' %}">
+                    <img src="{% static 'img/무서운이야기.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/미션임파서블.html' %}">
+                    <img src="{% static 'img/미션임파서블.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/박쥐.html' %}">
+                    <img src="{% static 'img/박쥐.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/백두산.html' %}">
+                    <img src="{% static 'img/백두산.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/범죄와의전쟁.html' %}">
+                    <img src="{% static 'img/범죄와의전쟁.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/베놈.html' %}">
+                    <img src="{% static 'img/베놈.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/벼랑위의포뇨.html' %}">
+                    <img src="{% static 'img/벼랑위의포뇨.jpg' %}"/></a></article></span><span class="a">
+                    <span class="a">
+                  <article><a href="{% static '상세정보/뷰티인사이드.html' %}">
+                    <img src="{% static 'img/뷰티인사이드.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/블랙위도우.html' %}">
+                    <img src="{% static 'img/블랙위도우.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/블랙팬서.html' %}">
+                    <img src="{% static 'img/블랙팬서.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/비긴어게인.html' %}">
+                    <img src="{% static 'img/비긴어게인.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/살인의추억.html' %}">
+                    <img src="{% static 'img/살인의추억.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/샹치와텐링즈의전설.html' %}">
+                    <img src="{% static 'img/샹치와텐링즈의전설.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/설국열차.html' %}">
+                    <img src="{% static 'img/설국열차.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/센과치히로의행방불명.html' %}">
+                    <img src="{% static 'img/센과치히로의행방불명.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/수상한그녀.html' %}">
+                    <img src="{% static 'img/수상한그녀.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/수어사이드스쿼드.html' %}">
+                    <img src="{% static 'img/수어사이드스쿼드.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/스타워즈.html' %}">
+                    <img src="{% static 'img/스타워즈.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/스탭업.html' %}">
+                    <img src="{% static 'img/스탭업.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/스파이더맨홈커밍.html' %}">
+                    <img src="{% static 'img/스파이더맨홈커밍.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/신비한동물사전.html' %}">
+                    <img src="{% static 'img/신비한동물사전.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/신세계.html' %}">
+                    <img src="{% static 'img/신세계.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/싱크홀.html' %}">
+                    <img src="{% static 'img/싱크홀.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/아바타.html' %}">
+                    <img src="{% static 'img/아바타.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/아이언맨.html' %}">
+                    <img src="{% static 'img/아이언맨.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/암살.html' %}">
+                    <img src="{% static 'img/암살.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/애나벨.html' %}">
+                    <img src="{% static 'img/애나벨.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/앤트맨.html' %}">
+                    <img src="{% static 'img/앤트맨.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/어바웃타임.html' %}">
+                    <img src="{% static 'img/어바웃타임.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/어벤져스.html' %}">
+                    <img src="{% static 'img/어벤져스.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/업.html' %}">
+                    <img src="{% static 'img/업.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/엑시트.html' %}">
+                    <img src="{% static 'img/엑시트.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/여고괴담.html' %}">
+                    <img src="{% static 'img/여고괴담.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/올드보이.html' %}">
+                    <img src="{% static 'img/올드보이.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/원령공주.html' %}">
+                    <img src="{% static 'img/원령공주.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/웰컴투동막골.html' %}">
+                    <img src="{% static 'img/웰컴투동막골.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/유체이탈자.html' %}">
+                    <img src="{% static 'img/유체이탈자.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/은밀하게위대하게.html' %}">
+                    <img src="{% static 'img/은밀하게위대하게.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/이웃집토토로.html' %}">
+                    <img src="{% static 'img/이웃집토토로.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/이터널선샤인.html' %}">
+                    <img src="{% static 'img/이터널선샤인.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/이터널스.html' %}">
+                    <img src="{% static 'img/이터널스.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/인생은아름다워.html' %}">
+                    <img src="{% static 'img/인생은아름다워.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/인셉션.html' %}">
+                    <img src="{% static 'img/인셉션.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/인크레더블헐크.html' %}">
+                    <img src="{% static 'img/인크레더블헐크.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/인터스텔라.html' %}">
+                    <img src="{% static 'img/인터스텔라.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/장난스런키스.html' %}">
+                    <img src="{% static 'img/장난스런키스.jpg' %}"/></a></article></span>
+                  <span class="a">
+                  <article><a href="{% static '상세정보/장산범.html' %}">
+                    <img src="{% static 'img/장산범.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/존윅.html' %}">
+                    <img src="{% static 'img/존윅.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/주온.html' %}">
+                    <img src="{% static 'img/주온.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/주홍글씨.html' %}">
+                    <img src="{% static 'img/주홍글씨.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/쥬라기공원.html' %}">
+                    <img src="{% static 'img/쥬라기공원.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/짱구는못말려.html' %}">
+                    <img src="{% static 'img/짱구는못말려.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/챔피언즈.html' %}">
+                    <img src="{% static 'img/챔피언즈.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/청년경찰.html' %}">
+                    <img src="{% static 'img/청년경찰.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/최종병기활.html' %}">
+                    <img src="{% static 'img/최종병기활.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/친절한금자씨.html' %}">
+                    <img src="{% static 'img/친절한금자씨.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/캡틴마블.html' %}">
+                    <img src="{% static 'img/캡틴마블.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/캡틴아메리카퍼스트어벤져.html' %}">
+                    <img src="{% static 'img/캡틴아메리카퍼스트어벤져.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/컨저링.html' %}">
+                    <img src="{% static 'img/컨저링.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/코리아.html' %}">
+                    <img src="{% static 'img/코리아.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/코코.html' %}">
+                    <img src="{% static 'img/코코.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/크루엘라.html' %}">
+                    <img src="{% static 'img/크루엘라.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/킬러의보디가드.html' %}">
+                    <img src="{% static 'img/킬러의보디가드.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/킹스맨.html' %}">
+                    <img src="{% static 'img/킹스맨.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/타워.html' %}">
+                    <img src="{% static 'img/타워.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/타짜.html' %}">
+                    <img src="{% static 'img/타짜.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/토르.html' %}">
+                    <img src="{% static 'img/토르.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/파라노말액티비티.html' %}">
+                    <img src="{% static 'img/파라노말액티비티.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/하울의움직이는성.html' %}">
+                    <img src="{% static 'img/하울의움직이는성.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/해리포터와마법사의돌.html' %}">
+                    <img src="{% static 'img/해리포터와마법사의돌.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/황해.html' %}">
+                    <img src="{% static 'img/황해.jpg' %}"/></a></article></span>
+                    <span class="a">
+                  <article><a href="{% static '상세정보/히말라야.html' %}">
+                    <img src="{% static 'img/히말라야.jpg' %}"/></a></article></span>
+
+                    
+            <!-- img태그를 article태그로 감싸고 크기 조정 -->
+        </div>
+        <div style="
+        position: absolute; left:680px; top: 200px;
+        font-size:2.8em;
+        color: white;
+        font-family: impact;
+        ">Popular
+        </div>
+        <!-- Popular 글씨 크기와 색깔 위치 지정 후 삽입 -->
+        <div style="
+        position: absolute; left:50px; top: 16px;
+        font-size:2.4em;
+        color: white;
+        cursor: pointer;
+        ">
+        <li><a href="{% url 'home' %}">ICE+</a></li>
+        </div>
+        <!-- 로고 크기와 위치 지정 후 클릭 시 홈으로 이동하게 설정 -->
+
+    </body>
+</html>
+

@@ -1,23 +1,35 @@
-{% extends 'base.html' %}
-{% load bootstrap4 %}
-{% block content %}
-<div class="wrapper" style="text-align: center;">
-    <h1>회원가입</h1>
-    <form method="POST">
-        {% csrf_token %}
-        아이디: <br>
-        <input name="username" type="text">
-        <br>
-        비밀번호: <br>
-        <input name="password1" type="password">
-        <br>
-        비밀번호 확인: <br>
-        <input name="password2" type="password">
-        <br>
-        이메일: <br>
-        <input name="email" type="email">
-        <br><br>
-        <input type="submit" class="btn btn-primary" value="Sign Up">
-    </form>
-</div>
-{% endblock %}
+{% load static %}
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/CreateStyle.css' %}">
+   </head>
+<body>
+    <div class="wrapper" style = "text-align: center;" >
+        <h1>회원가입</h1>
+        <form method = "POST">
+            {% csrf_token %}
+            <div class="input-box">
+              <!-- required를 사용해 검증 로직 -->
+              <input placeholder = "Your name" name="username" type="text" required>
+            </div>
+            <div class="input-box">
+                <input placeholder = "Password" name="password1" type="password" required>
+            </div>
+            <div class="input-box">
+                <input placeholder = "Confirm password" name="password2" type="password" required>
+            </div>
+            <div class="input-box">
+                <input placeholder = "Email" name="email" type="email" required>
+            </div>
+            <div class="input-box button">
+              <input type="submit" value="Sign up">
+            </div>
+            <div class="text">
+              <h3>이미 계정이 있는 경우 <a href="{% url 'login' %}">로그인</a></h3>
+            </div>
+          </form>
+        </div>
+</body>
+</html>
+

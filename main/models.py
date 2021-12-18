@@ -18,7 +18,11 @@ class movie(models.Model):
 
 class genre(models.Model):
     genre_title = models.CharField(max_length=50)
-    genre_name = models.CharField(max_length=20)  
+    genre_name = models.CharField(max_length=20)
+
+class grade(models.Model):
+    grade_title = models.CharField(max_length=50)
+    grade_age = models.CharField(max_length=20)      
 
 
 

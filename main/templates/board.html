@@ -1,10 +1,26 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% block content %}
+<style>
+    body{
+        background-color: rgb(60, 60, 60);
+        color: white;
+    
+    }
+    .th_color{
+        color: white;
+    }
+    .td_color{
+        color: white;
+    }
+
+
+</style>
+<body>
 <div style="width:1200px; margin:0px auto;">
     <h2 style="text-align:center;">게시판-회원가입자만 사용가능</h2><br>
     {% if board %}
-    <table style="text-align:center; width:1200px; border:1px solid black;" class="table">
+    <table style="text-align:center; width:1200px; border:1px solid white;" class="table">
         <thead>
             <tr class="th_color">
                 <th>번호</th>
@@ -37,4 +53,5 @@
         </form>
     </div>
 </div>
+</body>
 {% endblock %}

@@ -1,0 +1,31 @@
+table {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+tbody {
+  display: flex;
+}
+
+th,
+td {
+  display: block;
+}
+
+iframe {
+  width: 100%;
+}
+
+.table {
+  margin-top: 30px;
+  width: 35%;
+  float: left;
+}
+
+.summary {
+  width: 65%;
+  float: left;
+}

@@ -1,10 +1,135 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load bootstrap4 %}
 {% block content %}
-    <ul>
-            <li><a href="{% url 'down05' %}"><span>2005년 이전 개봉작</span></a></li>
-            <li><a href="{% url '0510' %}"><span>2005년 ~ 2010년 개봉작</span></a></li>
-            <li><a href="{% url 'up10' %}"><span>2011년 이후 개봉작</span></a></li>
-            <li><a href="{% url 'sf' %}"><span>SF영화</span></a></li>
-    </ul>
+<html lang="ko">
+    <meta charset="UTF-8">
+    <head>
+        <title>Gernes-popup</title>
+
+<style>
+	#wrap{
+		width:1000px;
+		margin: 100px 380px;
+		overflow: hidden;
+		position: absolute;
+		padding-top: 12px;
+	}
+	 /* wrap 위치와 너비 등 조정 */
+	article{
+		float: left;
+		margin-left: 30px;
+		margin-bottom: 10px;
+	}
+	 /*img 정렬 방향과 간격 등 조정*/
+
+	body{
+		background-color: rgb(60, 60, 60);
+	}
+	/* 배경 색상 설정 */
+
+	#box{
+		width:200px;
+		height:480px;
+		background-color:rgb(36, 36, 36);
+        border: 1px solid white;
+        margin: 140px 50px;
+        position: absolute;
+        overflow: hidden; 
+		padding-top: 90px;
+	}
+  /* 년도 선택 박스 설정 */	
+</style>
+</head>
+
+
+
+    <body>
+        <div id = "box">
+			<div style="
+			position: absolute; left:6px; top: 16px;
+			font-size:2.0em;
+			color: white;
+			">
+			Year
+			</div>
+			<button type = button style="width:150px; height: 40px"><a href="{% url 'down05' %}">2005년 이전</a></button>
+			<button type = button style="width:150px; height: 40px"><a href="{% url '0510' %}">2005년~2010년</a></button>
+			<button type = button style="width:150px; height: 40px"><a href="{% url 'up10' %}">2010년 이후</a></button><br><br><br><br>
+      <div style="
+			position: absolute; left:6px; top: 220px;
+			font-size:2.0em;
+			color: white;
+			">
+			Grade
+			</div>
+      <button type = button style="font-size: 0.9em; color: black; width:160px; height: 40px" ><a href="{% url 'all' %}">전체관람가</a></button>
+			<button type = button style="font-size: 0.9em; color: black; width:160px; height: 40px"><a href="{% url '12' %}">12세 관람가</a></button>
+			<button type = button style="font-size: 0.9em; color: black; width:160px; height: 40px"><a href="{% url '15' %}">15세 관람가</a></button>
+			<button type = button style="font-size: 0.9em; color: black; width:160px; height: 40px"><a href="{% url 'adult' %}">청소년 관람불가</a></button>
+
+
+		</div>
+
+        <div id="wrap">
+            <!-- wrap으로 이름 부여 -->
+                <article><a href="{% url 'horror' %}">
+                    <img src="{% static 'genreimg/공포.jpg' %}" alt = "이미지" width = "175" height = "175" style = "border: 3px ; border-radius: 7px; -moz-border-radius: 7px; -khtml-border-radius: 7px; 
+                    -webkit-border-radius: 7px;"/>
+                  </a></article>
+                <article><a href="{% url 'romance' %}">
+                    <img src="{% static 'genreimg/로맨스.jpg' %}" alt = "이미지" width = "175" height = "175" style = "border: 3px ; border-radius: 7px; -moz-border-radius: 7px; -khtml-border-radius: 7px; 
+                    -webkit-border-radius: 7px;"/>
+                  </a></article>
+                <article><a href="{% url 'drama' %}">
+                    <img src="{% static 'genreimg/드라마.jpg' %}" alt = "이미지" width = "175" height = "175" style = "border: 3px ; border-radius: 7px; -moz-border-radius: 7px; -khtml-border-radius: 7px; 
+                    -webkit-border-radius: 7px;"/>
+                  </a></article>
+                <article><a href="{% url 'mystery' %}">
+                    <img src="{% static 'genreimg/미스터리.png' %}" alt = "이미지" width = "175" height = "175" style = "border: 3px ; border-radius: 7px; -moz-border-radius: 7px; -khtml-border-radius: 7px; 
+                    -webkit-border-radius: 7px;"/>
+                  </a></article>
+                <article><a href="{% url 'thriller' %}">
+                    <img src="{% static 'genreimg/스릴러.jpg' %}" alt = "이미지" width = "175" height = "175" style = "border: 3px ; border-radius: 7px; -moz-border-radius: 7px; -khtml-border-radius: 7px; 
+                    -webkit-border-radius: 7px;"/>
+                  </a></article>
+                <article><a href="{% url 'fantasy' %}">
+                    <img src="{% static 'genreimg/판타지.png' %}" alt = "이미지" width = "175" height = "175" style = "border: 3px ; border-radius: 7px; -moz-border-radius: 7px; -khtml-border-radius: 7px; 
+                    -webkit-border-radius: 7px;"/>
+                  </a></article>
+                <article><a href="{% url 'criminal' %}">
+                    <img src="{% static 'genreimg/범죄.jpg' %}" alt = "이미지" width = "175" height = "175" style = "border: 3px ; border-radius: 7px; -moz-border-radius: 7px; -khtml-border-radius: 7px; 
+                    -webkit-border-radius: 7px;"/>
+                  </a></article>
+                <article><a href="{% url 'ani' %}">
+                    <img src="{% static 'genreimg/애니메이션.png' %}" alt = "이미지" width = "175" height = "175" style = "border: 3px ; border-radius: 7px; -moz-border-radius: 7px; -khtml-border-radius: 7px; 
+                    -webkit-border-radius: 7px;"/>
+                  </a></article>
+                <article><a href="{% url 'action' %}">
+                    <img src="{% static 'genreimg/액션.png' %}" alt = "이미지" width = "175" height = "175" style = "border: 3px ; border-radius: 7px; -moz-border-radius: 7px; -khtml-border-radius: 7px; 
+                    -webkit-border-radius: 7px;"/>
+                  </a></article>
+                <article><a href="{% url 'sf' %}">
+                    <img src="{% static 'genreimg/SF.jpg' %}" alt = "이미지" width = "175" height = "175" style = "border: 3px ; border-radius: 7px; -moz-border-radius: 7px; -khtml-border-radius: 7px; 
+                    -webkit-border-radius: 7px;"/>
+                  </a></article>
+                <article><a href="{% url 'comedy' %}">
+                    <img src="{% static 'genreimg/코미디.png' %}" alt = "이미지" width = "175" height = "175" style = "border: 3px ; border-radius: 7px; -moz-border-radius: 7px; -khtml-border-radius: 7px; 
+                    -webkit-border-radius: 7px;"/>
+                  </a></article>
+                 <!-- img태그를 article태그로 감싸고 크기 조정 및 편집 -->
+                
+        </div>
+
+        <div style="
+        position: absolute; left:50px; top: 16px;
+        font-size:2.4em;
+        color: white;
+        cursor: pointer;
+        "
+        >
+        <a href="{% url 'home' %}">ICE+</a>
+        </div>
+		<!-- 로고 크기와 위치 지정 후 클릭 시 홈으로 이동하게 설정 -->
+	</body>
 {% endblock %}

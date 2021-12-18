@@ -1,7 +1,19 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% block content %}
-{%if movie_2004 %} <!--movie_list가 있다면-->
+{%if movie_2004 %}
+<style>
+    body {
+        background-color: rgba(60, 60, 60);
+    
+    }
+    body > ul {
+        font-size: 20px;
+        color: white;
+    }
+</style>
+<body>
+<h1>2005년도 이전 영화</h1> <!--movie_list가 있다면-->
     <ul>
         {%for movie in movie_1965%}<!--리스트 반복하여 순차적으로 하나씩 movie에 대입-->
             <li>{{movie.movie_Title}}, {{movie.movie_Year}}</li>
@@ -35,5 +47,6 @@
         {%endfor%}
             
     </ul>
+</body>
 {%endif%}    
 {% endblock %}  

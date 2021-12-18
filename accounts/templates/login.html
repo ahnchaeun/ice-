@@ -1,21 +1,29 @@
-{% extends 'base.html' %}
-{% load bootstrap4 %}
-{% block content %}
-<div class="wrapper">
-    <div style="text-align: center;">
-        <h1>로그인</h1>
-        <form method="POST">
-            {% csrf_token %}
-            아이디:
-            <br>
-            <input name="username" type="text">
-            <br>
-            비밀번호:
-            <br>
-            <input name="password" type="password">
-            <br><br>
-            <input type="submit" class="btn btn-primary" value="Login">
-        </form>
-    </div>
-</div>
-{% endblock %}
+{% load static %}   
+   <head>
+        <meta charset="UTF-8">
+        <title>Login-page1</title>
+        <link rel="stylesheet" href="{% static 'css/loginstyle.css' %}">
+    </head>
+    <body>
+        <section class = "login-form">
+            <h1>로그인</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="int-area">
+                    <!-- required를 사용해 검증 로직 -->
+                    <input type="text" name="username" 
+                    autocomplete="off" required>
+                    <label for="username">NAME</label>
+                </div>
+                <div class="int-area">
+                    <input type="password" name="password" 
+                    autocomplete="off" required>
+                    <label for="password">PASSWORD</label>
+                </div>
+                <div class = "btn">
+                    <input type="submit" value ="Login">
+                </div>
+            </form>
+        </section>
+    </body>
+</html>
